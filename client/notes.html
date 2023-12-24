@@ -1,8 +1,22 @@
--App has client and server parts
+-App has two parts, client and server
 -we are using vite
 -Setting up client 
     -npm create vite@latest client 
     -choose react and js
     -cd client and npm install
-    -install tailwind with vite (see react and check website)
+    -install tailwind with vite (check website for tailwind plus vite)
 -pushing to github
+
+-creating routes
+    -first, we will have to create the pages for routes
+    -we create a folder in src, called pages and than create the pages we need.
+    -we download the react router using the command "npm i react-router-dom" inside the client section
+    -we always set up the router inside the appjs, so we import BrowserRouter, Routes and Route in the app.jsx 
+    -we then wrap everything as below
+        -<BrowserRouter>
+        -<Routes>
+        -    <Route path = "/" element = {<Home />} />
+        -</Routes>
+        -</BrowserRouter>
+
+
