@@ -27,3 +27,27 @@
     -this has three sections, h1, form for search bar, and the menu. 
     -for the menu buttons to redirect to different pages, we use the <Link> from "react-router-dom"
     -we wrap each button inside the link and in the link we add to for the routing. 
+
+-create and run the server
+    -we run npm init to create a package.json in the root folder. 
+    -we create api folder just like the client folder.
+    -we install express in the root folder.
+    -we add the "type" "module" to enable named imports in the index.js file 
+    -we import express in the index.js file and initialize the app = express()
+    -we than listen on the app,
+        app.listen(3000, ()=> {});
+    -we then install nodemon for refreshing the server automatically.
+    -we add the scripts in the index.js in api for our convenience.
+
+-connect to database
+    -create an account on the mongodb website.
+    -choose the free tier option. 
+    -select a name for the project, and save the details
+    -then copy the link from the website for the project 
+    -install dotenv for mongoose.connect(MONGO) in the index.js 
+    -create a .env file and paste the the link as a string in the variable called MONGO 
+    -then in the index.js, import the dotenv and use it for the mongoose.connect(MONGO) and use .then and .catch to see
+    if the connection to mongodb is successfull or not.
+
+-create user model 
+    -
