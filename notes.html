@@ -70,3 +70,23 @@
     as it will make the code look cleaner and will be easier to maintain. 
     -we need to add .js in the import in index.js and routes otherwise it will give an error 
     -in the index.js we update the function app.use("/api/user/", userRouter)
+
+-create a middleware and a function to handle possible errors 
+    -in the index.js page, we set up another 
+        -app.use((err, req, res, next) => {
+            const statusCode = err.statusCode;
+            const message = err.message;
+            return res.status(statusCode).json({
+                success: false,
+                statusCode,
+                message,
+            })
+        })
+    -then we go to the auth.controller.js to also take next as an input and then in the catch block,
+    we use the next(error);
+    -then we create utils folder inside the api folder. And inside it, we create error.js for handling the errors.
+    -we create errorHandler function that accepts (statusCode, error) and create a new error using the 
+    js error creator and at the last of this function throw/return this error.
+
+-complete signup page ui 
+    -
